@@ -14,6 +14,5 @@ class Vertex:
     def print_neighbours(self):
         a = []
         for i in range(len(self.adj_list)):
-            #print(self.adj_list[i].name)
             a.append(self.adj_list[i].name)
         return a

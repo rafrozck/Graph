@@ -1,11 +1,15 @@
 from Vertex import Vertex
 
+
 class Edge:
-    def __init__(self, weight):
+    # Initialize Edge with specified weight and with direction or not
+    def __init__(self, weight, direction=False):
         self.weight = weight
         self.v1 = None
         self.v2 = None
+        self.direction = direction
 
+    # Function connects two vertices with specified weight
     def connect_vertices(self, v1, v2):
         if isinstance(v1, Vertex) and isinstance(v2, Vertex):
             v1.add_neigbour(v2)
@@ -16,5 +20,6 @@ class Edge:
         else:
             return False
 
+    # Function prints names of two connected vertices
     def print_joints(self):
-        return (self.v1, self.v2)
+        return self.v1, self.v2
